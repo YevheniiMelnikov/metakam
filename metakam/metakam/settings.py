@@ -7,7 +7,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.environ.get("DEBUG_STATUS", "False").lower() == "true"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]  # TODO: REMOVE ON PROD
+
+CSRF_TRUSTED_ORIGINS = ["https://5917-62-216-57-32.ngrok-free.app"]  # TODO: REMOVE ON PROD
 
 INSTALLED_APPS = [
     "django.contrib.admin",
